@@ -8,7 +8,7 @@ const Orders = () => {
     const [orders, setOrders] = useState([]);
     const [refresh, setRefresh] = useState(false);
     const handleDelete = (id) => {
-        fetch(`https://wolf-meal-server.vercel.app/orders/${id}`, {
+        fetch(`https://wolf-meal-server-production.up.railway.app/orders/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())
@@ -20,7 +20,7 @@ const Orders = () => {
             })
     }
     useEffect(() => {
-        fetch(`https://wolf-meal-server.vercel.app/orders?email=${user?.email}`)
+        fetch(`https://wolf-meal-server-production.up.railway.app/orders?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setRefresh(true)

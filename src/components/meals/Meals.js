@@ -13,7 +13,7 @@ const Meals = () => {
     const [size, setSize] = useState(6);
     const pages = Math.ceil(count / size)
     useEffect(() => {
-        fetch(`https://wolf-meal-server.vercel.app/meals?page=${page}&size=${size}`)
+        fetch(`https://wolf-meal-server-production.up.railway.app/meals?page=${page}&size=${size}`)
             .then(res => res.json())
             .then(data => {
                 setLoading(false)

@@ -47,12 +47,12 @@ const Header = () => {
             open ? <HiOutlineX className='w-8 h-8' /> : <BiMenu className='w-8 h-8' />
           }
         </div>
-        <div className="lg:m-0 md:m-0 mx-auto">
-          <h1 className='lg:text-2xl font-third font-bold'>Wolf Meal</h1>
-        </div>
+       
+          <h1 className='lg:text-2xl font-third font-bold whitespace-nowrap'>Wolf Meal</h1>
+       
 
-        <div>
-          <ul className={`flex md:flex-row font-secondary lg:flex-row flex-col z-20 h-screen snap-none md:h-full bg-black w-full text-center overscroll-none lg:static md:static absolute lg:flex ${open ? 'top-14  left-0' : 'top-[-900px]'} justify-center gap-10 text-xl font-semibold items-center`}>
+        <div className={`shadow-lg md:shadow-none rounded-b-2xl  absolute md:static duration-1000 flex left-0 w-full justify-center z-[999] ${open ? 'top-14' : 'top-[-940px]'}`}>
+          <ul className={`flex flex-col md:flex-row lg:flex-row font-secondary  z-20 h-screen snap-none md:h-full bg-black w-full text-center lg:static lg:flex justify-center gap-10 text-xl font-semibold items-center`}>
             <li><Link onClick={() => setOpen(!open)} to='/'>Home</Link></li>
             <li><Link onClick={() => setOpen(!open)} to='/meals'>Meals</Link></li>
             <li><Link onClick={() => setOpen(!open)} to="/about">About</Link></li>
@@ -117,3 +117,6 @@ const Header = () => {
 };
 
 export default Header;
+
+
+

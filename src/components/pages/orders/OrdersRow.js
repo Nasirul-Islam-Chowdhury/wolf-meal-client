@@ -15,7 +15,7 @@ const OrdersRow = ({ order, orders,handleDelete,setOrders, setRefresh }) => {
         const name = form.name.value
         const details = { name, email, address, message, phone };
 
-            fetch(`https://wolf-meal-server.vercel.app/orders/${_id}`, {
+            fetch(`https://wolf-meal-server-production.up.railway.app/orders/${_id}`, {
                 method: "PATCH",
                 headers: {
                     "content-type": "application/json"

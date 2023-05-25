@@ -17,6 +17,6 @@ code {
 }
 @layer components{
   .container{
-    @apply max-w-screen-xl mx-auto
+    @apply max-w-[1440px] mx-auto
   }
 }

@@ -18,7 +18,7 @@ const {user} = useContext(AuthContext)
         const name = form.name.value
         const details = {name, email,strArea, address, message, phone, strMeal,strMealThumb};
     
-    fetch("https://wolf-meal-server.vercel.app/orders", {
+    fetch("https://wolf-meal-server-production.up.railway.app/orders", {
             method: "POST",
             headers: {
                 "content-type": "application/json"

@@ -30,7 +30,7 @@ const Profile = () => {
                 </div>
             }
             <div>
-                <h1 className='text-center text-xl font-semibold mt-2'>
+                <h1 className='text-center text-xl font-semibold mt-2 px-4'>
                     "Age is just a number, i always grow up my skill"
                 </h1>
             </div>
