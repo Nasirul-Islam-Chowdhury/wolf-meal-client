@@ -17,9 +17,9 @@ const Header = () => {
         confirmButton: 'btn btn-success',
         cancelButton: 'btn btn-danger'
       },
-   
+
     })
-    
+
     swalWithBootstrapButtons.fire({
       title: 'Are you sure to logout?',
       text: "You have to log in again to continue",
@@ -35,9 +35,9 @@ const Header = () => {
           'You are Logged out from wolf meal',
         )
         logOut()
-      } 
+      }
     })
-   
+
   }
   return (
     <div className="bg-black  px-3 lg:px-20 md:px-20  text-white">
@@ -66,49 +66,49 @@ const Header = () => {
             }
           </ul>
         </div>
-
-
-
         {
           user &&
-          <div  className=" dropdown dropdown-bottom dropdown-end" >
-            <label tabIndex={0} className="m-1">
+          <div className='flex justify-center items-center gap-2'>
+            <div className='font-third'>
+              {user.displayName.split(" ")[0]}
+            </div>
+            <div className=" dropdown dropdown-bottom dropdown-end" >
+              <label tabIndex={0} className="m-1">
 
-              <div className='cursor-pointer  tooltip tooltip-left' data-tip={user?.displayName}>
-                {
-                  user?.photoURL ?
-                    <div className="avatar">
-                      <div className="w-8 rounded-full ring  ring-offset-base-100 ring-offset-2">
-                        <img src={user?.photoURL} alt="profile" />
+                <div className='cursor-pointer  tooltip tooltip-left' data-tip={user?.displayName}>
+                  {
+                    user?.photoURL ?
+                      <div className="avatar">
+                        <div className="w-8 rounded-full ring  ring-offset-base-100 ring-offset-2">
+                          <img src={user?.photoURL} alt="profile" />
+                        </div>
                       </div>
-                    </div>
-                    :
+                      :
 
-                    <div className="avatar">
-                      <div className="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
-                        <RxAvatar className='w-full h-full' />
+                      <div className="avatar">
+                        <div className="w-8 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                          <RxAvatar className='w-full h-full' />
+                        </div>
                       </div>
-                    </div>
 
-                }
-              </div>
-            </label>
-            <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-blue-700 rounded-box w-52">
-              <li className='hover:bg-white hover:text-black text-white'>
-                <Link to="/profile">
-                  Profile
-                </Link>
-              </li>
-              <li className='hover:bg-white hover:text-black text-white' onClick={handleLogout}>
-                <Link>
-                  Logout
-                </Link>
-              </li>
-            </ul>
+                  }
+                </div>
+              </label>
+              <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-blue-700 rounded-box w-52">
+                <li className='hover:bg-white hover:text-black text-white'>
+                  <Link to="/profile">
+                    Profile
+                  </Link>
+                </li>
+                <li className='hover:bg-white hover:text-black text-white' onClick={handleLogout}>
+                  <Link>
+                    Logout
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         }
-
-
 
       </div>
     </div>

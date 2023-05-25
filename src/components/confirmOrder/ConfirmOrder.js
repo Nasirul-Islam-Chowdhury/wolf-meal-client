@@ -36,9 +36,9 @@ const {user} = useContext(AuthContext)
     }
 
     return (
-        <div className='w-3/4 container lg:px-20 md:px-20 bg-base-100'>
+        <div className='lg:w-3/4 md:w-3/4 container lg:px-20 md:px-20 bg-base-100'>
             <div className="shadow-xl">
-            <figure><img  className='w-full h-96' src={strMealThumb} alt="Shoes" /></figure>
+            <figure><img  className='w-full lg:h-96 h-56' src={strMealThumb} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title">{strMeal}</h2>
                 <p>{strInstructions}</p>
