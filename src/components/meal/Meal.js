@@ -11,7 +11,7 @@ const Meal = ({ meal }) => {
                 <p>{strInstructions.slice(0,100)}...</p>
                 <div className="card-actions justify-end">
                    <button className='btn'>
-                        <Link className='bg-orange-600' to={`/conformOrder/${_id}`}> Order Now </Link>
+                        <Link to={`/conformOrder/${_id}`}> Order Now </Link>
                    </button>
                 </div>
             </div>
