@@ -12,6 +12,7 @@ const Meals = () => {
     const [page, setPage] = useState(0);
     const [size, setSize] = useState(6);
     const pages = Math.ceil(count / size)
+    
     useEffect(() => {
         fetch(`https://wolf-meal-server-production.up.railway.app/meals?page=${page}&size=${size}`)
             .then(res => res.json())
@@ -21,7 +22,7 @@ const Meals = () => {
                 setCount(data.count)
                 setFoundItems(data.meals.length)
             })
-    }, [page, size,setLoading])
+    }, [page, size,setLoading]);
 
     const handleSearch = (e) => {
         const newMeals = meals.filter(meal => meal.strMeal.includes(e.target.value));

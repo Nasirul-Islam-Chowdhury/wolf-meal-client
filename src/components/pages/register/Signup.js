@@ -39,7 +39,7 @@ const Signup = () => {
     const handleGooglesignin = () => {
         googleSignin()
             .then(res => {
-                console.log(res.user)
+                navigate(from, { replace: true });
             })
             .catch(error => setError(error.message))
     }

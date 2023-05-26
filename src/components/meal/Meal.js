@@ -10,8 +10,8 @@ const Meal = ({ meal }) => {
                 <h2 className="card-title">{strMeal}</h2>
                 <p>{strInstructions.slice(0,100)}...</p>
                 <div className="card-actions justify-end">
-                   <button className='btn btn-primary'>
-                        <Link to={`/conformOrder/${_id}`}> Order Now </Link>
+                   <button className='btn'>
+                        <Link className='bg-orange-600' to={`/conformOrder/${_id}`}> Order Now </Link>
                    </button>
                 </div>
             </div>
