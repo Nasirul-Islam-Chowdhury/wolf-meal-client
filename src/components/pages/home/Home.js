@@ -3,6 +3,7 @@ import Banner from '../../Banner/Banner';
 import BestFoodSection from '../../bestFoodSection/BestFoodSection';
 import ServeSection from '../../serveSection/ServeSection';
 import Pride from '../../Pride/Pride';
+import Accordian from '../../Review/Review';
 
 const Home = () => {
     return (
@@ -11,6 +12,7 @@ const Home = () => {
             <BestFoodSection/>
             <Pride/>
             <ServeSection/>
+            <Accordian/>
         </div>
     );
 };

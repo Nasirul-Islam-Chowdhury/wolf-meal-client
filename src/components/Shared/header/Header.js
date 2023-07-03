@@ -100,10 +100,10 @@ const Header = () => {
                     Profile
                   </NavLink>
                 </li>
-                <li className='hover:bg-white hover:text-black text-white' onClick={handleLogout}>
-                  <NavLink>
+                <li className='  text-white' onClick={handleLogout}>
+                  <div>
                     Logout
-                  </NavLink>
+                  </div>
                 </li>
               </ul>
             </div>

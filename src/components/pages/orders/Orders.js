@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import OrdersRow from './OrdersRow';
 import { AuthContext } from '../../contexts/AuthProvider';
+import Swal from 'sweetalert2';
 
 
 const Orders = () => {
@@ -8,7 +9,7 @@ const Orders = () => {
     const [orders, setOrders] = useState([]);
     const [refresh, setRefresh] = useState(false);
     const handleDelete = (id) => {
-        fetch(`https://wolf-meal-server-production.up.railway.app/orders/${id}`, {
+        fetch(`https://wolf-meal-server.vercel.app/orders/${id}`, {
             method: "DELETE"
         })
             .then(res => res.json())
@@ -16,11 +17,12 @@ const Orders = () => {
                 if (data.deletedCount >= 1) {
                     const remaining = orders.filter(order=> order._id !== id);
                     setOrders(remaining)
+                    Swal.fire("Order Deleted successfully")
                 }
             })
     }
     useEffect(() => {
-        fetch(`https://wolf-meal-server-production.up.railway.app/orders?email=${user?.email}`)
+        fetch(`https://wolf-meal-server.vercel.app/orders?email=${user?.email}`)
             .then(res => res.json())
             .then(data => {
                 setRefresh(true)
@@ -28,7 +30,7 @@ const Orders = () => {
             })
     }, [refresh, user?.email])
     return (
-        <div className='container'>
+        <div className='container min-h-[700px]'>
             {
                 orders.length > 0 && <div >
                     <h1 className='text-center text-2xl py-5 font-semibold' > Total Orders {orders.length}</h1>

@@ -38,16 +38,17 @@ const Signin = () => {
     }
     return (
         <div className='my-5'>
-            <div className="flex  flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
-                <div>
-                    <Link href="/">
-                        <h3 className="text-3xl font-bold text-blue-900">
+            <div className="flex flex-col items-center min-h-[100vh] pt-6 sm:justify-center sm:pt-0 bg-gray-50">
+              
+                   
+                      
+                  
+              
+                <div className="w-full px-10 py-20  overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg">
+                    <form onSubmit={handleSignin}>
+                    <h3 className="text-3xl text-center font-bold text-blue-900">
                             Wolf Meal
                         </h3>
-                    </Link>
-                </div>
-                <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg">
-                    <form onSubmit={handleSignin}>
                         <div>
                             <div className='mt-4'>
                                 <h1 className='font-semibold p-1'>Email</h1>

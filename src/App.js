@@ -28,7 +28,7 @@ function App() {
         {
           path: '/conformOrder/:_id',
           element: <PrivateRoute><ConfirmOrder/></PrivateRoute>,
-          loader: ({params})=> fetch(`https://wolf-meal-server-production.up.railway.app/meals/${params._id}`)
+          loader: ({params})=> fetch(`https://wolf-meal-server.vercel.app/meals/${params._id}`)
         },
         {
           path: '/orders',

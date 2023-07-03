@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider';
 import { FaFacebook, FaGoogle } from "react-icons/fa";
 const Signup = () => {
-    const { createUser, googleSignin, facebookSignin } = useContext(AuthContext)
+    const { createUser, googleSignin } = useContext(AuthContext)
     const [error, setError] = useState('');
     const navigate = useNavigate();
     const location = useLocation();
@@ -45,15 +45,12 @@ const Signup = () => {
     }
     return (
         <div className="flex  flex-col items-center min-h-screen my-4 pt-6 sm:justify-center sm:pt-0 bg-gray-50">
-            <div>
-                <Link>
-                    <h3 className="text-3xl font-bold text-blue-900">
+           
+            <div className="w-full px-10 py-20  overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg">
+                <form onSubmit={handleRegister}>
+                <h3 className="text-3xl font-bold text-blue-900 text-center">
                         Wolf Meal
                     </h3>
-                </Link>
-            </div>
-            <div className="w-full px-6 py-4 mt-2 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg">
-                <form onSubmit={handleRegister}>
                     <div>
                         <div className='mt-4'>
                             <h1 className='font-semibold p-1'>Name</h1>

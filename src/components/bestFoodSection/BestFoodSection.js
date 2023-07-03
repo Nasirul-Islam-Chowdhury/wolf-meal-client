@@ -5,7 +5,7 @@ import { FaAngleRight } from "react-icons/fa";
 const BestFoodSection = () => {
     const [meals, setMeals] = useState([])
     useEffect(()=>{
-        fetch('https://wolf-meal-server-production.up.railway.app/newmeals')
+        fetch('https://wolf-meal-server.vercel.app/newmeals')
         .then(res=>res.json())
         .then(data=>setMeals(data))
     },[])

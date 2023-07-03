@@ -37,11 +37,7 @@ const AuthProvider = ({ children }) => {
         // localStorage.removeItem("geniusToken");
         signOut(auth)
     }
-    if(loading){
-      return  <div className='flex justify-center '>
-        <div className="radial-progress" style={{"--value":70}}>70%</div>
-      </div>
-    }
+  
     const authInfo = {
         user,
         loading,

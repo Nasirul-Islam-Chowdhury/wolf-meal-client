@@ -2,7 +2,7 @@ import React from 'react';
 
 const About = () => {
     return (
-        <div className='md:flex container lg:flex justify-between items-center gap-10 w-4/5 mx-auto my-20'>
+        <div className='md:flex container lg:flex justify-between items-center gap-10 w-4/5 mx-auto lg:my-40 my-20'>
             <div className='md:w-1/2 lg:w-1/2 w-5/4'>
                 <h1 className='text-3xl font-bold mb-8'>About Us</h1>
                 <p className='mb-4'>Food-Age has been a key online resource for the global food and beverage industry,
@@ -21,7 +21,7 @@ const About = () => {
                 </p>
             </div>
             <div className='md:w-1/2 lg:w-1/2 w-5/4'>
-                <img className='w-full rounded' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8ZwZ2tuTvWJXRIRDBjpHM--O-J6sULrMbJA&usqp=CAU" alt="" />
+                <img className='w-full h-96 rounded object-cover' src="https://media.self.com/photos/5a316fd183ab3f54feacf768/4:3/w_2560%2Cc_limit/Roasted-pork.jpg" alt="" />
             </div>
         </div>
     );
